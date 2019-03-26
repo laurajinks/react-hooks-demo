@@ -2,22 +2,29 @@ import React from "react";
 import { useInput } from "../../hooks/useInput";
 
 const Form = () => {
-    const name = useInput("");
-    const age = useInput("");
-    const favColor = useInput("");
-    const favColor = useInput("");
-    const favColor = useInput("");
+	const firstName = useInput("");
+	const age = useInput(null);
+	const favColor = useInput("");
+	const favDrink = useInput("");
 
-    return (
-        <div>
-            <input type="text" placeholder="First Name" {...name} />
-            <input type="text" placeholder="Last Name" {...age} />
-            <input type="text" placeholder="Email" {...favColor} />
-            <h1>Name: {name.value}</h1>
-            <h1>Age: {age.value}</h1>
-            <h1>Favorite Color: {favColor.value}</h1>
-        </div>
-    );
+	return (
+		<div className="form">
+			<h1> Custom Hook Form #2</h1>
+			<input type="text" placeholder="First Name" {...firstName} />
+			<input type="number" placeholder="Age" {...age} />
+			<input type="text" placeholder="Favorite Color" {...favColor} />
+			<div {...favDrink}>
+				<input type="radio" name="drink" id="coffee" value="Coffee" />
+				<label for="coffee">Coffee</label>
+				<input type="radio" name="drink" id="tea" value="Tea" />
+				<label for="tea">Tea</label>
+			</div>
+			<h2>First Name: <span>{firstName.value}</span></h2>
+			<h2>Age: <span>{age.value}</span></h2>
+			<h2>Favorite Color: <span>{favColor.value}</span></h2>
+			<h2>Favorite Drink: <span>{favDrink.value}</span></h2>
+		</div >
+	);
 };
 
 export default Form;
