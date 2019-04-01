@@ -18,9 +18,9 @@ export default class ClassForm extends Component {
         return (
             <div className="form">
                 <h1>Form in Class Component</h1>
-                <input type="text" placeholder="First Name" name="firstName" onChange={handleInput} />
-                <input type="text" placeholder="Last Name" name='lastName' onChange={handleInput} />
-                <input type="text" placeholder="Email" name='email' onChange={handleInput} />
+                <input type="text" placeholder="First Name" name="firstName" onChange={this.handleInput} />
+                <input type="text" placeholder="Last Name" name='lastName' onChange={this.handleInput} />
+                <input type="text" placeholder="Email" name='email' onChange={this.handleInput} />
                 <h2>First Name: <span>{this.state.firstName}</span></h2>
                 <h2>Last Name: <span>{this.state.lastName}</span></h2>
                 <h2>Email: <span>{this.state.email}</span></h2>
