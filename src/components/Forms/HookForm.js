@@ -5,12 +5,11 @@ const HookForm = () => {
     const [color, setColor] = useState('black')
 
     useEffect(() => {
+        console.log('useEffect')
         if (inputs.firstName === 'Laura') {
             setColor('red');
-            console.log('red')
         } else {
             setColor('black')
-            console.log('black')
         }
     }, [inputs.firstName])
 
