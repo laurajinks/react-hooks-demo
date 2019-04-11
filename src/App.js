@@ -10,8 +10,8 @@ class App extends Component {
         return (
             <div className="App">
 
-                {/* <ClassForm />
-                <HookForm /> */}
+                <ClassForm />
+                <HookForm />
                 <CustomHookForm1 />
                 <CustomHookForm2 />
             </div>
